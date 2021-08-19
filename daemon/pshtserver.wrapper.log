@@ -1,0 +1,14 @@
+2020-04-11 15:36:03 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Admin\AppData\Roaming\nvm\v13.9.0\node_modules\node-windows\lib\wrapper.js --file C:\Dev\Apps\app-psht\server\app.js --scriptoptions= --log "PSHT - Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-04-11 15:36:03 - Started 752
+2020-04-11 15:46:19 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Admin\AppData\Roaming\nvm\v13.9.0\node_modules\node-windows\lib\wrapper.js --file C:\Dev\Apps\app-psht\server\app.js --scriptoptions= --log "PSHT - Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-04-11 15:46:20 - Started 14172
+2020-04-11 15:57:27 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Admin\AppData\Roaming\nvm\v13.9.0\node_modules\node-windows\lib\wrapper.js --file C:\Dev\Apps\app-psht\server\app.js --scriptoptions= --log "PSHT - Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-04-11 15:57:27 - Started 428
+2020-04-12 18:20:40 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Admin\AppData\Roaming\nvm\v13.9.0\node_modules\node-windows\lib\wrapper.js --file C:\Dev\Apps\app-psht\server\app.js --scriptoptions= --log "PSHT - Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-04-12 18:20:41 - Started 5904
+2020-04-13 09:42:43 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Admin\AppData\Roaming\nvm\v13.9.0\node_modules\node-windows\lib\wrapper.js --file C:\Dev\Apps\app-psht\server\app.js --scriptoptions= --log "PSHT - Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-04-13 09:42:44 - Started 10140
+2020-04-13 09:43:37 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Admin\AppData\Roaming\nvm\v13.9.0\node_modules\node-windows\lib\wrapper.js --file C:\Dev\Apps\app-psht\server\app.js --scriptoptions= --log "PSHT - Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-04-13 09:43:37 - Started 8556
+2020-04-13 09:47:25 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\Users\Admin\AppData\Roaming\nvm\v13.9.0\node_modules\node-windows\lib\wrapper.js --file C:\Dev\Apps\app-psht\server\app.js --scriptoptions= --log "PSHT - Server wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2020-04-13 09:47:25 - Started 13480

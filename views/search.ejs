@@ -1,0 +1,47 @@
+<%- include('layouts/header'); -%>
+<div class="container-fluid h-100 my-h">
+  <div class="row align-items-center h-100">
+    <div class="col-sm-12">
+      <div class="row justify-content-center">
+        <form class="form col-6" action='/result' method='post'>
+          <div class="form-inline justify-content-center">
+            <div class="form-check search-chk">
+              <input class="form-check-input" type="radio" name="search[db]" id="exampleRadios1" value="horses" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Horses
+              </label>
+            </div>
+            <div class="form-check search-chk">
+              <input class="form-check-input" type="radio" name="search[db]" id="exampleRadios2" value="members">
+              <label class="form-check-label" for="exampleRadios2">
+                Members
+              </label>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Search" aria-label="Search"
+              aria-describedby="button-addon2" name='search[request]'>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href='#' onclick='document.getElementById("psht").submit();'>PSHT
+                  Members</a>
+              </div>
+            </div>
+          </div>
+        </form>
+        <% if (title === ':(') { %>
+        <%- include('comps/push-info'); -%>
+        <% } %> 
+        <form id="psht" action="/result" method="post" style="display:none;">
+          <input class="form-check-input" type="checkbox" name="search[psht]" value='true' checked>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('layouts/footer'); -%>

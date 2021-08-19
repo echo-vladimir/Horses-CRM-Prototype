@@ -1,0 +1,68 @@
+body, html {
+  height: 100%;
+}
+
+.search-chk {
+  margin: 6px !important;
+}
+
+.form-check {
+  margin-bottom: .5rem;
+}
+
+.btns .btn-light {
+  margin-right: .5rem;
+}
+
+.content-indent {
+  margin: 2rem 0;
+}
+
+.my-h {
+  height: 90% !important;
+}
+
+.finder-size {
+  width: 100% !important;
+}
+
+tbody svg {
+  fill: #007bff;
+}
+
+.alert {
+  text-align: center !important;
+}
+
+.alert-fill {
+  fill: #e96969
+}
+
+/* Всплывающие уведомления */
+
+.main-container{
+position: relative; /* Set to absolute */
+-moz-transition: transform 1s; 
+-webkit-transition: transform 1s;  
+-ms-transition: transform 1s;  
+-o-transition: transform 1s;  
+transition: transform 1s,opacity 2s;
+}
+
+.alert-container {
+  position: absolute; /* Set to absolute and positioned at top corner*/
+  top: -30px;
+  left: 0;
+}
+
+.alert-content {
+  position: absolute;   /* This moves it to the bottom (initial state) */
+  bottom: 90%; 
+  width: 100%;
+  height: 10%;
+  transition: bottom 1s;
+}
+
+.main-container:hover .alert-content {
+   bottom: 50%;   /* This moves it to the middle (only on hover) */
+}

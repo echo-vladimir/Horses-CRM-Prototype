@@ -1,0 +1,137 @@
+<%- include('layouts/header'); -%>
+<div class="container">
+  <h1 class="content-indent"><%= title %></h1>
+  <form action='<%= action %>' method='post'>
+    <label for="horse[id]">Owner</label>
+    <div class="form-inline">
+      <div class="input-group mb-2 mr-sm-2">
+        <select class="custom-select" name='horse[id]' id="horse[id]" required>
+          <option disabled <%= (!member.id) ? "selected" : "" %>>Choose...</option>
+          <% members.forEach((m) => {%>
+          <option value="<%= m.id %>" <%= (m.id === member.id) ? "selected" : "" %>>
+            <%= m.name %>
+          </option>
+          <%  }) %>
+        </select>
+      </div>
+
+      <div class="mb-2 mr-sm-2">
+        or <a href='/member'>Add new member</a>
+      </div>
+    </div>
+    </br>
+
+    <div class='form-row'>
+      <div class='form-group col-md-6'>
+        <label for='horse[name]'>Name</label>
+        <input type="text" class="form-control" id='horse[name]' name='horse[name]'
+          value="<%= (horse.name) ? horse.name : '' %>" required>
+      </div>
+      <div class='form-group col-md-2'>
+        <label for='horse[birthday]'>Birthday</label>
+        <input type='date' class="form-control" id='horse[birthday]' name='horse[birthday]'
+          value="<%= (horse.birthday) ? horse.birthday : '' %>" required>
+      </div>
+      <div class='form-group col-md-2'>
+        <label for="horse[sex]">Sex</label>
+        <select class="custom-select" name='horse[sex]' id="horse[sex]" required>
+          <option disabled <%= (!horse.sex) ? "selected" : "" %>>Choose...</option>
+          <option value="male" <%= (horse.sex === "male") ? "selected" : "" %>>Male</option>
+          <option value="female" <%= (horse.sex === "female") ? "selected" : "" %>>Female</option>
+          <option value="gelding" <%= (horse.sex === "gelding") ? "selected" : "" %>>Gelding</option>
+        </select>
+      </div>
+      <div class='form-group col-md-2'>
+        <label for='horse[height]'>Height</label>
+        <input type='text' class="form-control" id='horse[height]' name='horse[height]'
+          value="<%= (horse.height) ? horse.height : '' %>">
+      </div>
+    </div>
+
+    <div class='form-row'>
+      <div class='form-group col-md-4'>
+        <label for='horse[chipnr]'>CHIPNR</label>
+        <input type="text" class="form-control" id='horse[chipnr]' name='horse[chipnr]'
+          value="<%= (horse.chipnr) ? horse.chipnr : '' %>" required>
+      </div>
+      <div class='form-group col-md-4'>
+        <label for='horse[chipnr]'>LEVENS</label>
+        <input type="text" class="form-control" id='horse[levens]' name='horse[levens]'
+          value="<%= (horse.levens) ? horse.levens : '' %>" required>
+      </div>
+      <div class='form-group col-md-2'>
+        <label for="horse[pssm]">PSSM</label>
+        <select class="custom-select" name='horse[pssm]' id="horse[pssm]" required>
+          <option disabled <%= (!horse.pssm) ? "selected" : "" %>>Choose...</option>
+          <option value="none" <%= (horse.pssm === "none") ? "selected" : "" %>>None</option>
+          <option value="n/n" <%= (horse.pssm === "n/n") ? "selected" : "" %>>N/N</option>
+          <option value="n/p1" <%= (horse.pssm === "n/p1") ? "selected" : "" %>>N/P1</option>
+          <option value="p1/p1" <%= (horse.pssm === "p1/p1") ? "selected" : "" %>>P1/P1</option>
+        </select>
+      </div>
+      <div class='form-group col-md-2'>
+        <label for="horse[award]">Premium</label>
+        <select class="custom-select" name='horse[award]' id="horse[award]">
+          <option disabled <%= (!horse.award) ? "selected" : "" %>>Choose...</option>
+          <option value="none" <%= (horse.award === "none") ? "selected" : "" %>>None</option>
+          <option value="model" <%= (horse.award === "model") ? "selected" : "" %>>Model</option>
+          <option value="preferent" <%= (horse.award === "preferent") ? "selected" : "" %>>Preferent</option>
+          <option value="1 + *" <%= (horse.award === "1 + *") ? "selected" : "" %>>1 + *</option>
+          <option value="1" <%= (horse.award === "1") ? "selected" : "" %>>1</option>
+          <option value="2" <%= (horse.award === "2") ? "selected" : "" %>>2</option>
+          <option value="3" <%= (horse.award === "3") ? "selected" : "" %>>3</option>
+        </select>
+      </div>
+    </div>
+    </br>
+
+    <label for="horse[father]">Father</label>
+    <div class="form-inline">
+      <div class="input-group mb-2 mr-sm-2 ">
+        <select name='horse[father]' class="custom-select">
+          <option disabled <%= (!horse.father) ? "selected" : "" %>>Choose...</option>
+          <% horses.forEach((h) => {%>
+          <option value="<%= h.name %>" <%= (h.name === horse.father) ? "selected" : "" %>>
+            <%= h.name %>
+          </option>
+          <%  }) %>
+        </select>
+      </div>
+      <div class="mb-2 mr-sm-2">
+        or add new: <input type='text' class="form-control" name='horse[ifather]'
+          value="<%= (horse.ifather) ? horse.ifather : '' %>" />
+      </div>
+    </div>
+    <label for="horse[mother]">Mother</label>
+    <div class="form-inline">
+      <div class="input-group mb-2 mr-sm-2">
+        <select name='horse[mother]' class="custom-select">
+          <option disabled <%= (!horse.mother) ? "selected" : "" %>>Choose...</option>
+          <% horses.forEach((h) => { %>
+          <option value="<%= h.name %>" <%= (h.name === horse.mother) ? "selected" : "" %>>
+            <%= h.name %>
+          </option>
+          <%  }) %>
+        </select>
+      </div>
+      <div class="mb-2 mr-sm-2">
+        or add new: <input type='text' class="form-control" name='horse[imother]'
+          value="<%= (horse.imother) ? horse.imother : '' %>" />
+      </div>
+    </div>
+    </br>
+
+    <div class='form-row'>
+      <div class='form-group col-md-2'>
+        <a href="/" class="btn btn-light active" role="button">Cancel</a>
+        <button type='submit' class='btn btn-success'><svg class="bi bi-check" width="1em" height="1em"
+            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z"
+              clip-rule="evenodd" />
+          </svg> Save</button>
+      </div>
+    </div>
+  </form>
+</div>
+<%- include('layouts/footer'); -%>
